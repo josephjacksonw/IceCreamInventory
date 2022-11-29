@@ -8,8 +8,7 @@ function NewICForm(props){
     event.preventDefault();
     props.onNewICCreation({
       names: event.target.names.value, 
-      location: event.target.location.value, 
-      issue: event.target.issue.value, 
+      amount: event.target.amount.value, 
       id: v4()
     });
   }
@@ -18,7 +17,8 @@ function NewICForm(props){
     <React.Fragment>
       <ReusableForm 
         formSubmissionHandler={handleNewICFormSubmission}
-        buttonText="Help!" />
+        buttonText="Buy Bucket!" />
+        <p>Each Bucket has 130 scoops</p>
     </React.Fragment>
   );
 }

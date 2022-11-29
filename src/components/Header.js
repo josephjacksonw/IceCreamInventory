@@ -4,8 +4,8 @@ import React from "react";
 function Header(){
   return (
     <React.Fragment>
-      <h1>Help Queue</h1>
-      {/* <img src={icsImage} alt="An image of ics" /> */}
+      <h1>Joe's Cold Ice Cream</h1>
+      {/* <img src={icsImage} alt="An image of ice cream" /> */}
     </React.Fragment>
   );
 }

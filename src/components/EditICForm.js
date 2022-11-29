@@ -9,8 +9,7 @@ function EditICForm (props) {
     event.preventDefault();
     props.onEditIC({
       names: event.target.names.value, 
-      location: event.target.location.value, 
-      issue: event.target.issue.value, 
+      amount: event.target.amount.value, 
       id: ic.id
     });
   }

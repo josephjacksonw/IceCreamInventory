@@ -70,19 +70,19 @@ class ICControl extends React.Component {
     let buttonText = null; 
     if (this.state.editing ) {      
       currentlyVisibleState = <EditICForm ic = {this.state.selectedIC} onEditIC = {this.handleEditingICInList} />
-      buttonText = "Return to IC List";
+      buttonText = "Return To Entire Inventory";
     } else if (this.state.selectedIC != null) {
       currentlyVisibleState = <ICDetail 
       ic={this.state.selectedIC} 
       onClickingDelete={this.handleDeletingIC}
       onClickingEdit = {this.handleEditClick} />
-      buttonText = "Return to IC List";
+      buttonText = "Return To Entire Inventory";
     } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewICForm onNewICCreation={this.handleAddingNewICToList}/>;
-      buttonText = "Return to IC List"; 
+      buttonText = "Return To Entire Inventory"; 
     } else {
       currentlyVisibleState = <ICList onICSelection={this.handleChangingSelectedIC} icList={this.state.mainICList} />;
-      buttonText = "Add IC"; 
+      buttonText = "Add Ice Cream to Inventory"; 
     }
     return (
       <React.Fragment>
