@@ -11,7 +11,8 @@ function ICList(props) { // Add props as parameter.
         <IC 
           whenICClicked={props.onICSelection}
           names={ic.names}
-          amount={ic.amount}
+          brand={ic.brand}
+          scoops={ic.scoops}
           id={ic.id}
           key={ic.id}/>
       )}

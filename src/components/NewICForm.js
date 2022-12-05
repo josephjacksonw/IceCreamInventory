@@ -8,7 +8,7 @@ function NewICForm(props){
     event.preventDefault();
     props.onNewICCreation({
       names: event.target.names.value, 
-      amount: event.target.amount.value, 
+      brand: event.target.brand.value, 
       id: v4()
     });
   }

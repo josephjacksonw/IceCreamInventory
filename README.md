@@ -17,6 +17,8 @@
 
 _This application is used for tracking the remaining inventory in an ice cream shop. The application has full CRUD, allowing users to create, read, edit, or delete inventory from their page. The system is set up so that 1 bucket of ice cream will contain 130 scoops for customers to buy and for the user to track._
 
+![Diagram of site layout](./src/img/IC%20Diagram.drawio.png)
+
 ## Setup/Installation Requirements
 
 * _Clone this repository into your desktop_

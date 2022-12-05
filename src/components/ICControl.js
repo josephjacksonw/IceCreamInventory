@@ -38,6 +38,7 @@ class ICControl extends React.Component {
     });
   }
 
+
   handleEditClick = () => {
     this.setState({editing: true});
   }
@@ -69,19 +70,28 @@ class ICControl extends React.Component {
     let currentlyVisibleState = null;
     let buttonText = null; 
     if (this.state.editing ) {      
-      currentlyVisibleState = <EditICForm ic = {this.state.selectedIC} onEditIC = {this.handleEditingICInList} />
+      currentlyVisibleState = 
+      <EditICForm 
+        ic = {this.state.selectedIC} 
+        onEditIC = {this.handleEditingICInList} />
       buttonText = "Return To Entire Inventory";
     } else if (this.state.selectedIC != null) {
-      currentlyVisibleState = <ICDetail 
-      ic={this.state.selectedIC} 
-      onClickingDelete={this.handleDeletingIC}
-      onClickingEdit = {this.handleEditClick} />
+      currentlyVisibleState = 
+      <ICDetail 
+        ic={this.state.selectedIC} 
+        onClickingDelete={this.handleDeletingIC}
+        onClickingEdit = {this.handleEditClick} />
       buttonText = "Return To Entire Inventory";
     } else if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = <NewICForm onNewICCreation={this.handleAddingNewICToList}/>;
+      currentlyVisibleState = 
+      <NewICForm
+        onNewICCreation={this.handleAddingNewICToList}/>;
       buttonText = "Return To Entire Inventory"; 
     } else {
-      currentlyVisibleState = <ICList onICSelection={this.handleChangingSelectedIC} icList={this.state.mainICList} />;
+      currentlyVisibleState = 
+      <ICList
+        onICSelection={this.handleChangingSelectedIC} 
+        icList={this.state.mainICList} />;
       buttonText = "Add Ice Cream to Inventory"; 
     }
     return (
